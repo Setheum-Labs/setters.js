@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { options } from '@setheum-js/setheum.js';
-import { EvmAccountInfo } from '@setheum-js/types/interfaces';
+import { options } from '@setheum.js/api';
+import { EvmAccountInfo } from '@setheum.js/types/interfaces';
 import type {
   Block,
   BlockTag,

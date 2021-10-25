@@ -11,7 +11,7 @@ yarn
 
 ## Documentation
 
-Most of the api of sevm.js is compatible with ethers.js. If you are not familiar with ethers.js, you can start by looking at its [documentation](https://docs.ethers.io/v5/single-page/)
+Most of the api of setters.js is compatible with ethers.js. If you are not familiar with ethers.js, you can start by looking at its [documentation](https://docs.ethers.io/v5/single-page/)
 
 ### Provider
 
@@ -24,8 +24,8 @@ The Provider provides some api for interacting with nodes and is an instance of 
 apiOptions has the same parameters as when creating an instance of apiPromise for polkadot.js 
 
 ```javascript
-import { options } from "@setheum-js/setheum.js";
-import { Provider } from "@setheum-js/sevm.js";
+import { options } from "@setheum.js/api";
+import { Provider } from "@setheum.js/setters";
 import { WsProvider } from "@polkadot/api";
 
 const evmprovider = new Provider(
@@ -47,7 +47,7 @@ The Wallet class inherits Signer and can sign transactions and messages using a 
 "privateKey".
 
 ```javascript
-import { Wallet } from "@setheum-js/sevm.js";
+import { Wallet } from "@setheum.js/setters";
 const wallet = new Wallet("0xaa397267eaee48b2262a973fdcab384a758f39a3ad8708025cfb675bb9effc20", provider)
 ```
 
@@ -67,7 +67,7 @@ wallet.claimEvmAccounts()
 ```javascript
 import { deployContract } from "ethereum-waffle";
 import ERC20Abi from "../build/ERC20Abi.json";
-import { TestAccountSigningKey, Provider, Signer } from "@setheum-js/sevm.js";
+import { TestAccountSigningKey, Provider, Signer } from "@setheum.js/setters";
 import { WsProvider } from "@polkadot/api";
 import { createTestPairs } from "@polkadot/keyring/testingPairs";
 

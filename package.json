@@ -1,8 +1,8 @@
 {
-  "name": "@setheum-js/sevm.js",
+  "name": "@setheum.js/setters",
   "version": "0.1.0",
   "main": "index.js",
-  "repository": "https://github.com/huang-lei1/sevm.js.git",
+  "repository": "https://github.com/setheum-js/setters.js.git",
   "author": "Setheum Labs <setheumjs@gmail.com>",
   "license": "Apache-2.0",
   "scripts": {
@@ -15,7 +15,7 @@
     "test:watch": "polkadot-dev-run-test --watch"
   },
   "peerDependencies": {
-    "@setheum-js/setheum.js": "^0.7.4-12"
+    "@setheum.js/api": "1.0.0"
   },
   "dependencies": {
     "@open-web3/scanner": "^0.9.4-3",
@@ -24,7 +24,7 @@
     "typescript": "^4.2.4"
   },
   "devDependencies": {
-    "@setheum-js/setheum.js": "^0.7.4-12",
+    "@setheum.js/api": "1.0.0",
     "@babel/core": "^7.14.3",
     "@babel/register": "^7.13.16",
     "@babel/runtime": "^7.14.0",
