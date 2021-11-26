@@ -1,0 +1,375 @@
+specVersion: 0.0.1
+description: ''
+repository: ''
+schema: ./schema.graphql
+network:
+  endpoint: ws://localhost:9944
+  types:
+    EvmAccountInfo:
+      nonce: 'Index'
+      contractInfo: 'Option<EvmContractInfo>'
+      developerDeposit: 'Option<Balance>'
+    EvmContractInfo:
+      codeHash: 'H256'
+      maintainer: 'H160'
+      deployed: 'bool'
+    TransactionAction:
+      _enum:
+        Call: 'H160'
+        Create: 'Null'
+    MultiSignature:
+      _enum:
+        Ed25519: 'Ed25519Signature'
+        Sr25519: 'Sr25519Signature'
+        Ecdsa: 'EcdsaSignature'
+        Ethereum: '[u8; 65]'
+        Eip712: '[u8; 65]'
+    CallOf: Call
+    DispatchTime: &a1
+      _enum:
+        At: BlockNumber
+        After: BlockNumber
+    ScheduleTaskIndex: u32
+    DelayedOrigin: &a2
+      delay: BlockNumber
+      origin: PalletsOrigin
+    AuthorityOrigin: DelayedOrigin
+    StorageValue: Vec<u8>
+    StorageKeyBytes: Vec<u8>
+    StorageValueBytes: Vec<u8>
+    RpcDataProviderId: Text
+    DataProviderId: u8
+    TimestampedValue: &a4
+      value: OracleValue
+      timestamp: Moment
+    TimestampedValueOf: TimestampedValue
+    OrderedSet: Vec<AccountId>
+    OrmlAccountData: &a5
+      free: Balance
+      frozen: Balance
+      reserved: Balance
+    OrmlBalanceLock: &a6
+      amount: Balance
+      id: LockIdentifier
+    AuctionInfo: &a7
+      bid: Option<(AccountId, Balance)>
+      start: BlockNumber
+      end: Option<BlockNumber>
+    DelayedDispatchTime: &a8
+      _enum:
+        At: BlockNumber
+        After: BlockNumber
+    DispatchId: u32
+    Price: FixedU128
+    OrmlVestingSchedule: &a9
+      start: BlockNumber
+      period: BlockNumber
+      periodCount: u32
+      perPeriod: Compact<Balance>
+    VestingScheduleOf: OrmlVestingSchedule
+    OrmlCurrencyId: CurrencyId
+    PoolInfo: &a10
+      totalShares: Share
+      rewards: BTreeMap<OrmlCurrencyId, (Balance, Balance)>
+    CompactBalance: Compact<Balance>
+    PoolInfoV0: &a11
+      totalShares: Compact<Share>
+      totalRewards: CompactBalance
+      totalWithdrawnRewards: CompactBalance
+    Share: u128
+    OracleValue: Price
+    Amount: i128
+    AmountOf: Amount
+    AuctionId: u32
+    AuctionIdOf: AuctionId
+    TokenSymbol: &a57
+      _enum:
+        SETM: 0
+        SERP: 1
+        DNAR: 2
+        SETR: 3
+        SETUSD: 4
+    DexShare: &a12
+      _enum:
+        Token: TokenSymbol
+        Erc20: EvmAddress
+    CurrencyId: &a13
+      _enum:
+        Token: TokenSymbol
+        DEXShare: (DexShare, DexShare)
+        ERC20: EvmAddress
+    CurrencyIdOf: CurrencyId
+    AirDropCurrencyId: &a14
+      _enum:
+        - SETR
+        - SETUSD
+    AuthoritysOriginId: &a15
+      _enum:
+        - Root
+        - Treasury
+    SetheumDataProviderId: &a16
+      _enum:
+        - Aggregated
+        - Setheum
+    TradingPair: (CurrencyId,  CurrencyId)
+    PalletBalanceOf: Balance
+    CollateralAuctionItem: &a17
+      refundRecipient: AccountId
+      currencyId: CurrencyId
+      initialAmount: Compact<Balance>
+      amount: Compact<Balance>
+      target: Compact<Balance>
+      startTime: BlockNumber
+    DebitAuctionItem: &a18
+      initialAmount: Compact<Balance>
+      amount: Compact<Balance>
+      fix: Compact<Balance>
+      startTime: BlockNumber
+    SurplusAuctionItem: &a19
+      amount: Compact<Balance>
+      startTime: BlockNumber
+    LiquidationStrategy: &a20
+      _enum:
+        - Auction
+        - Exchange
+    OptionRate: Option<Rate>
+    OptionRatio: Option<Ratio>
+    ChangeOptionRate: &a21
+      _enum:
+        NoChange: 'Null'
+        NewValue: OptionRate
+    ChangeOptionRatio: &a22
+      _enum:
+        NoChange: 'Null'
+        NewValue: OptionRatio
+    ChangeBalance: &a23
+      _enum:
+        NoChange: 'Null'
+        NewValue: Balance
+    RiskManagementParams: &a24
+      maximumTotalDebitValue: Balance
+      liquidationRatio: Option<Rate>
+      liquidationPenalty: Option<Rate>
+      requiredCollateralRatio: Option<Rate>
+    CandidateInfoOf: CandidateInfo
+    TradingPairProvisionParameters: &a25
+      minContribution: (Balance, Balance)
+      targetProvision: (Balance, Balance)
+      accumulatedProvision: (Balance, Balance)
+      notBefore: BlockNumber
+    BalanceWrapper: &a26
+      amount: Balance
+    BalanceRequest: &a27
+      amount: Balance
+    TradingPairStatus: &a28
+      _enum:
+        NotEnabled: 'Null'
+        Provisioning: TradingPairProvisionParameters
+        Enabled: 'Null'
+    Erc20Info: &a29
+      address: EvmAddress
+      name: Vec<u8>
+      symbol: Vec<u8>
+      decimals: u8
+    EstimateResourcesResponse: &a30
+      gas: u256
+      storage: i32
+      weightFee: u256
+    CodeInfo: &a32
+      codeSize: u32
+      refCount: u32
+    EvmAddress: H160
+    CallRequest: &a34
+      from: Option<H160>
+      to: Option<H160>
+      gasLimit: Option<u32>
+      storageLimit: Option<u32>
+      value: Option<U128>
+      data: Option<Bytes>
+    PoolId: &a39
+      _enum:
+        Loans: CurrencyId
+        Dex: CurrencyId
+    Position: &a41
+      collateral: Balance
+      debit: Balance
+    CID: Vec<u8>
+    Attributes: BTreeMap<Vec<u8>, Vec<u8>>
+    TokenInfoOf: &a42
+      metadata: CID
+      owner: AccountId
+      data: TokenData
+    Properties: &a43
+      _set:
+        _bitLength: 8
+        Transferable: 1
+        Burnable: 2
+        Mintable: 4
+        ClassPropertiesMutable: 8
+    ClassData: &a44
+      deposit: Balance
+      properties: Properties
+      attributes: Attributes
+    TokenData: &a45
+      deposit: Balance
+      attributes: Attributes
+    TokenId: u64
+    TokenIdOf: TokenId
+    NFTClassId: u32
+    ClassIdOf: ClassId
+    NFTBalance: u128
+    NFTBalanceOf: NFTBalance
+    ClassInfoOf: &a46
+      metadata: CID
+      totalIssuance: TokenId
+      owner: AccountId
+      data: ClassData
+    OracleKey: CurrencyId
+    AsOriginId: AuthoritysOriginId
+    ProxyType: &a49
+      _enum:
+        - Any
+        - CancelProxy
+        - Governance
+        - Auction
+        - Swap
+        - Loan
+    AtLeast64BitUnsigned: u128
+    ChangeRate: &a54
+      _enum:
+        NoChange: 'Null'
+        NewValue: Rate
+    ChangeRatio: &a55
+      _enum:
+        NoChange: 'Null'
+        NewValue: Ratio
+    BalanceInfo: &a56
+      amount: Balance
+    ExchangeRate: FixedU128
+    Rate: FixedU128
+    Ratio: FixedU128
+    PublicKey: '[u8; 20]'
+    DestAddress: Vec<u8>
+    DepositNonce: u64
+    ResourceId: '[u8; 32]'
+    ChainId: u8
+    Keys: SessionKeys1
+  typesAlias: &a58
+    evm:
+      AccountInfo: EvmAccountInfo
+      ContractInfo: EvmContractInfo
+    rewards:
+      OrmlCurrencyId: CurrencyId
+    oracle:
+      DataProviderId: SetheumDataProviderId
+    tokens:
+      AccountData: OrmlAccountData
+      BalanceLock: OrmlBalanceLock
+  typesBundle:
+    spec:
+      setheum:
+        rpc: &a59
+          oracle:
+            getValue:
+              description: Retrieves the oracle value for a given key.
+              params:
+                - name: providerId
+                  type: RpcDataProviderId
+                - name: key
+                  type: OracleKey
+                - name: at
+                  type: BlockHash
+                  isHistoric: true
+                  isOptional: true
+              type: Option<TimestampedValue>
+              isSubscription: false
+              jsonrpc: oracle_getValue
+              method: getValue
+              section: oracle
+            getAllValues:
+              description: Retrieves all oracle values.
+              params:
+                - name: providerId
+                  type: RpcDataProviderId
+                - name: at
+                  type: BlockHash
+                  isHistoric: true
+                  isOptional: true
+              type: Vec<(OracleKey, Option<TimestampedValue>)>
+              isSubscription: false
+              jsonrpc: oracle_getAllValues
+              method: getAllValues
+              section: oracle
+          dex:
+            getSupplyAmount:
+              description: Get supply amount
+              params:
+                - name: supplyCurrencyId
+                  type: CurrencyId
+                - name: targetCurrencyId
+                  type: CurrencyId
+                - name: targetCurrencyAmount
+                  type: BalanceRequest
+              type: BalanceWrapper
+              isSubscription: false
+              jsonrpc: dex_getSupplyAmount
+              method: getSupplyAmount
+              section: dex
+            getTargetAmount:
+              description: Get target amount
+              params:
+                - name: supplyCurrencyId
+                  type: CurrencyId
+                - name: targetCurrencyId
+                  type: CurrencyId
+                - name: supplyCurrencyAmount
+                  type: BalanceRequest
+              type: BalanceWrapper
+              isSubscription: false
+              jsonrpc: dex_getTargetAmount
+              method: getTargetAmount
+              section: dex
+          evm:
+            call:
+              description: eth call
+              params:
+                - name: data
+                  type: CallRequest
+                - name: at
+                  type: BlockHash
+                  isHistoric: true
+                  isOptional: true
+              type: Raw
+              isSubscription: false
+              jsonrpc: evm_call
+              method: call
+              section: evm
+            estimateResources:
+              description: eth estimateResources
+              params:
+                - name: from
+                  type: H160
+                - name: unsignedExtrinsic
+                  type: Bytes
+                - name: at
+                  type: BlockHash
+                  isHistoric: true
+                  isOptional: true
+              type: EstimateResourcesResponse
+              isSubscription: false
+              jsonrpc: evm_estimateResources
+              method: estimateResources
+              section: evm
+        instances:
+          council:
+            - shuraCouncil
+dataSources:
+  - name: main
+    kind: substrate/Runtime
+    startBlock: 2
+    mapping:
+      handlers:
+        - handler: handleEvmEvent
+          kind: substrate/EventHandler
+          filter:
+            module: evm
