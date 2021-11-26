@@ -45,8 +45,8 @@
     "@ethersproject/abstract-provider": "~5.4.0",
     "@ethersproject/properties": "~5.4.0",
     "@ethersproject/transactions": "~5.4.0",
-    "@setheum.js/api": "~3.0.2-1",
-    "@setheum.js/types": "~3.0.1",
+    "@setheum.js/api": "~2.0.1",
+    "@setheum.js/types": "~2.0.1",
     "@ethersproject/logger": "~5.4.0",
     "@ethersproject/networks": "~5.4.0",
     "@ethersproject/address": "~5.4.0"

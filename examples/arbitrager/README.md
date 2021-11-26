@@ -26,7 +26,7 @@ docker run --rm -p 9944:9944 setheum/mandala-node:latest --dev --ws-external --r
 ```
 
 If you whish to build and run the local development network from source, you can clone the
-[SetheumNetwork/Setheum](https://github.com/Setheum-Labs/Setheum) repository and follow the steps on how
+[Setheum-Labs/Setheum](https://github.com/Setheum-Labs/Setheum) repository and follow the steps on how
 to set it up under the chapter **3. BUILD**. or use the following commands:
 
 <details>

@@ -2,7 +2,7 @@
   "name": "@setheum.js/setters",
   "version": "2.1.4",
   "main": "lib/index.js",
-  "repository": "git@github.com:SetheumNetwork/setters.js.git",
+  "repository": "git@github.com:Setheum-Labs/setters.js.git",
   "author": "Setheum JS Developers <setheumjs@gmail.com>",
   "license": "Apache-2.0",
   "scripts": {
