@@ -31,7 +31,7 @@
     "typescript": "~4.4.4"
   },
   "dependencies": {
-    "@setheum.js/eth-providers": "~2.1.2",
+    "@setheum.js/eth-providers": "~2.1.5",
     "@polkadot/api": "~6.4.2"
   },
   "resolutions": {
