@@ -1,0 +1,54 @@
+{
+  "name": "@setheum.js/evm-subql",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "yarn codegen && tsc -b",
+    "build:watch": "tsc -b",
+    "prepack": "rm -rf dist && npm build",
+    "codegen": "./node_modules/.bin/subql codegen",
+    "test": "echo",
+    "index": "subql-node -f . --local --batch-size 200 --subquery-name=setheum-evm --debug",
+    "query": "PORT=3001 subql-query --name setheum-evm --playground --indexer=http://localhost:3000 --debug"
+  },
+  "homepage": "https://github.com/subquery/subql-starter",
+  "repository": "github:subquery/subql-starter",
+  "files": [
+    "dist",
+    "schema.graphql",
+    "project.yaml"
+  ],
+  "author": "Setheum JS Developers <setheumjs@gmail.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@polkadot/types": "~6.4.2",
+    "@rushstack/heft": "~0.42.0",
+    "@subql/cli": "~0.12.0",
+    "@subql/types": "~0.8.4",
+    "pino": "~7.0.0-rc.3",
+    "tslib": "~2.3.1",
+    "typescript": "~4.4.4"
+  },
+  "dependencies": {
+    "@setheum.js/eth-providers": "~2.1.5",
+    "@polkadot/api": "~6.4.2"
+  },
+  "resolutions": {
+    "@polkadot/api": "~6.4.2",
+    "@polkadot/api-derive": "~6.4.2",
+    "@polkadot/types": "~6.4.2",
+    "@polkadot/util-crypto": "~7.5.1",
+    "@polkadot/util": "~7.5.1",
+    "@ethersproject/bignumber": "~5.4.0",
+    "@ethersproject/bytes": "~5.4.0",
+    "@ethersproject/abstract-provider": "~5.4.0",
+    "@ethersproject/properties": "~5.4.0",
+    "@ethersproject/transactions": "~5.4.0",
+    "@setheum.js/api": "2.0.1",
+    "@setheum.js/types": "2.0.1",
+    "@ethersproject/logger": "~5.4.0",
+    "@ethersproject/networks": "~5.4.0",
+    "@ethersproject/address": "~5.4.0"
+  }
+}
