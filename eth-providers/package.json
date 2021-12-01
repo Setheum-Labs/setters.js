@@ -1,6 +1,6 @@
 {
   "name": "@setheum.js/eth-providers",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "main": "lib/index.js",
   "license": "MIT",
   "author": "Setheum JS Developers <setheumjs@gmail.com>",
@@ -14,7 +14,7 @@
     "gql:typegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
-    "@setheum.js/eth-transactions": "workspace:*",
+    "@setheum.js/eth-transactions": "2.1.4",
     "@polkadot/api": "~6.9.2",
     "@polkadot/api-derive": "~6.9.2",
     "@polkadot/types": "~6.9.2",
@@ -28,6 +28,9 @@
     "@ethersproject/transactions": "~5.4.0",
     "@setheum.js/api": "2.0.1",
     "@setheum.js/types": "2.0.1",
+    "@acala-network/api": "~3.0.3-3",
+    "@acala-network/types": "~3.0.3-3",
+    "@open-web3/orml-api-derive": "^1.0.2-0",
     "@ethersproject/logger": "~5.4.0",
     "@ethersproject/networks": "~5.4.0",
     "bn.js": "~5.2.0",
