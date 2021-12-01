@@ -1,6 +1,6 @@
 # @setheum.js/eth-providers
 
-Providers that contain some reusable functionalities for setters and eth-rpc-adaptor.
+Providers that contain some reusable functionalities for SetterJS and eth-rpc-adaptor.
 
 ## Run
 - install deps

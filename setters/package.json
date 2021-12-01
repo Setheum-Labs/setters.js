@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@setheum.js/eth-providers": "workspace:*",
-    "@setheum.js/types": "~2.0.1",
+    "@setheum.js/types": "2.0.1",
     "@ethersproject/abstract-provider": "~5.4.0",
     "@ethersproject/address": "~5.4.0",
     "@ethersproject/bignumber": "~5.4.0",
@@ -40,7 +40,7 @@
   "devDependencies": {
     "@types/chai": "~4.2.22",
     "@types/mocha": "~9.0.0",
-    "@setheum.js/api": "~2.0.1",
+    "@setheum.js/api": "2.0.1",
     "@rushstack/eslint-config": "~2.4.2",
     "@rushstack/heft": "~0.41.6",
     "@types/chai": "~4.2.22",

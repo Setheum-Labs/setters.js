@@ -1,5 +1,5 @@
 import { checkSignatureType, Eip712Transaction, parseTransaction } from '@setheum.js/eth-transactions';
-import type { EvmAccountInfo, EvmContractInfo } from '@setheum.js/types/interfaces';
+import type { EvmAccountInfo, EvmContractInfo } from '@setheum.js/types/src/interfaces';
 import {
   EventType,
   FeeData,

@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  mandala-node:
-    image: setheum/mandala-node:dc8d634b
+  setheum-node:
+    image: setheum/setheum-node:dc8d634b
     ports:
       - 9944:9944
     command:
@@ -30,7 +30,7 @@ services:
     image: onfinality/subql-node:latest
     depends_on:
       - postgres
-      - mandala-node
+      - setheum-node
     ports:
       - 3000:3000
     restart: always
@@ -44,7 +44,7 @@ services:
       - ./:/app
     command:
       - -f=/app
-      - --network-endpoint=ws://mandala-node:9944
+      - --network-endpoint=ws://setheum-node:9944
       - --subquery-name=setheum-evm
       - --log-level=debug
 

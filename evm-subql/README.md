@@ -21,7 +21,7 @@ yarn build
 ```
 
 ### run all services with docker
-This includes a Mandala node within Docker.
+This includes a Setheum node within Docker.
 
 ```
 docker-compose down && docker volume prune      # clean docker volume (optional)

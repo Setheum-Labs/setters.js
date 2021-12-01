@@ -2,7 +2,6 @@
 
 setters.js SDK implements a web3 provider to allow existing Ethereum dApp to be able to interact with [Setheum EVM](https://github.com/Setheum-Labs/Setheum/tree/master/lib-serml/evm).
 
-**If you are using mandala tc6, then you should use @setheum.js/setters@0.2.x, @setheum.js/api@0.7.1, @polkadot/api@4.2.1.** 
 
 ## Getting Started
 

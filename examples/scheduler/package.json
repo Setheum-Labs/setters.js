@@ -19,9 +19,9 @@
     "typescript": "~4.4.4"
   },
   "dependencies": {
-    "@setheum.js/api": "~2.0.1",
+    "@setheum.js/api": "2.0.1",
     "@setheum.js/setters": "workspace:*",
-    "@setheum-labs/predeploy-contracts": "~2.1.0",
+    "@setheum-labs/predeploy-contracts": "2.1.0",
     "@polkadot/keyring": "~7.9.2",
     "@polkadot/api": "~6.9.2"
   }
