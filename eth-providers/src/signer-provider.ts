@@ -1,4 +1,4 @@
-import { options } from '@acala-network/api';
+import { options } from '@setheum.js/api';
 import { TransactionResponse } from '@ethersproject/abstract-provider';
 import { ApiPromise } from '@polkadot/api';
 import type { ApiOptions } from '@polkadot/api/types';

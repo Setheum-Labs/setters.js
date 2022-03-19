@@ -28,8 +28,6 @@
     "@ethersproject/transactions": "~5.4.0",
     "@setheum.js/api": "2.0.1",
     "@setheum.js/types": "2.0.1",
-    "@acala-network/api": "~3.0.3-3",
-    "@acala-network/types": "~3.0.3-3",
     "@open-web3/orml-api-derive": "^1.0.2-0",
     "@ethersproject/logger": "~5.4.0",
     "@ethersproject/networks": "~5.4.0",

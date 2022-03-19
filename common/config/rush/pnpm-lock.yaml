@@ -7,8 +7,6 @@ importers:
 
   ../../eth-providers:
     specifiers:
-      '@acala-network/api': ~3.0.3-3
-      '@acala-network/types': ~3.0.3-3
       '@ethersproject/abstract-provider': ~5.4.0
       '@ethersproject/address': ~5.4.0
       '@ethersproject/bignumber': ~5.4.0
@@ -48,8 +46,6 @@ importers:
       ts-node: ~10.3.0
       typescript: ~4.4.4
     dependencies:
-      '@acala-network/api': 3.0.3-3_@polkadot+types@6.9.2
-      '@acala-network/types': 3.0.3-3
       '@ethersproject/abstract-provider': 5.4.1
       '@ethersproject/bignumber': 5.4.2
       '@ethersproject/bytes': 5.4.0
@@ -556,56 +552,6 @@ importers:
       typescript: 4.4.4
 
 packages:
-
-  /@acala-network/api-derive/3.0.3-3_@polkadot+api@6.9.2:
-    resolution: {integrity: sha512-LUiVne5c6HNofl3q2aThK8FwXNvmtcqBQ6PM8coENWUkTYpsE+ILp0w91AuVmxgAd6CJeA6uGxCjFGsICr5YIA==}
-    dependencies:
-      '@acala-network/types': 3.0.3-3
-      '@babel/runtime': 7.16.3
-      '@open-web3/orml-types': 1.0.2-2_@polkadot+api@6.9.2
-      '@polkadot/api-derive': 6.9.2
-    transitivePeerDependencies:
-      - '@polkadot/api'
-      - '@polkadot/typegen'
-      - supports-color
-    dev: false
-
-  /@acala-network/api/3.0.3-3_@polkadot+types@6.9.2:
-    resolution: {integrity: sha512-k2wVTHI4QsLQhwXeFn44/07EFCTJfwwcJSp1zuZGGPnHptCS7of/g8HPtEToz2fECzZeuuhD+rQzytrxXGVxkA==}
-    peerDependencies:
-      '@polkadot/types': ^6.5.2
-    dependencies:
-      '@acala-network/api-derive': 3.0.3-3_@polkadot+api@6.9.2
-      '@acala-network/types': 3.0.3-3
-      '@babel/runtime': 7.16.3
-      '@open-web3/orml-api-derive': 1.0.2-2_@polkadot+api@6.9.2
-      '@polkadot/api': 6.9.2
-      '@polkadot/rpc-core': 6.9.2
-      '@polkadot/types': 6.9.2
-    transitivePeerDependencies:
-      - '@polkadot/typegen'
-      - supports-color
-    dev: false
-
-  /@acala-network/type-definitions/3.0.3-3:
-    resolution: {integrity: sha512-vE5GtRsKFoF9SHhPaquY6oD4J9l1bh1kExUafQfYPtSExDViW1vf09YB+OopuXtAGuauW+YqdT7Ze4MPPBWUZw==}
-    dependencies:
-      '@open-web3/orml-type-definitions': 1.0.2-2
-    dev: false
-
-  /@acala-network/types/3.0.3-3:
-    resolution: {integrity: sha512-xZqwFPOmMO0lctZkUH9aTWzJabG5cJOg5Ze5lYRtek3IqGoxGLup2qEnN1p5DT7qUo52WqcqDBGYybZYXy17nw==}
-    dependencies:
-      '@acala-network/type-definitions': 3.0.3-3
-      '@babel/runtime': 7.16.3
-      '@open-web3/api-mobx': 1.0.2-2_@polkadot+api@6.9.2
-      '@open-web3/orml-types': 1.0.2-2_58f71897b939cf218cdbe20410f27596
-      '@polkadot/api': 6.9.2
-      '@polkadot/typegen': 6.9.2
-      '@polkadot/types': 6.9.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
 
   /@babel/code-frame/7.12.11:
     resolution: {integrity: sha512-Zt1yodBx1UcyiePMSkWnU4hPqhwq7hGi2nFL1LeA3EUl+q2LQx16MISgJ0+z7dnmgvP9QtIleuETGOiOH1RcIw==}
