@@ -85,3 +85,15 @@ git push
 # do this after the code is actually merged
 git push origin v2.0.8-beta
 ```
+
+## This Version - Setters-v2.2.0
+
+- Setheum Node Release v1.0.0
+- setheum.js/* v3.3.1
+- setters.js v2.2.0
+- Setters v1.0.0
+- EthProviders v2.2.0
+- EthRpcAdapter v2.0.0
+- EthTransactions v2.1.4
+- EvmSubQL v0.0.1
+- examples/* v1.0.0
