@@ -1,6 +1,6 @@
 {
   "name": "@setheum.js/eth-providers",
-  "version": "2.1.5",
+  "version": "2.2.0",
   "main": "lib/index.js",
   "license": "MIT",
   "author": "Setheum JS Developers <setheumjs@gmail.com>",

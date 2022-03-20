@@ -1,6 +1,6 @@
 {
   "name": "@setheum.js/eth-rpc-adaptor",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "lib/index.js",
   "license": "MIT",
   "author": "Setheum JS Developers <setheumjs@gmail.com>",
